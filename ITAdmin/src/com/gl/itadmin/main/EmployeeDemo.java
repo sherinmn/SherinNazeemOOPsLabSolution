@@ -24,28 +24,26 @@ public class EmployeeDemo {
 		
 		System.out.println("Please enter the department from the following - \n 1.Technical\n 2.Admin\n 3.Human Resource\n 4.Legal");
 		int option=sc.nextInt();
-		String technical="technical";
-		String admin="admin";
-		String hr="human_resource";
-		String legal="legal";
+		String dept = null;
 		switch(option)
 		{
 		case 1:
-			emp.setDepartment(technical);
+			dept="technical";
 			break;
 		case 2:
-			emp.setDepartment(admin);
+			dept="admin";
 			break;
 		case 3:
-			emp.setDepartment(hr);
+			dept="human_resource";
 			break;
 		case 4:
-			emp.setDepartment(legal);
+			dept="legal";
 			break;
 		default:
 			System.out.println("Please enter the correct option");
 			break;
 		}
+		emp.setDepartment(dept);
 		System.out.println("Dear "+firstName+" your credentials are as follows");
 		emp.setEmail(service.generateEmail(emp));
 		emp.setPassword(service.generatePassword());
